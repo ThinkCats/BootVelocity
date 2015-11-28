@@ -11,6 +11,9 @@ ENV MAVEN_HOME /usr/share/maven
 RUN echo 'Get Maven Home:'
 RUN echo $MAVEN_HOME
 
+RUN echo 'now '
+RUN ls
+
 RUN mkdir /usr/src/app
 COPY . /usr/src/app
 WORKDIR /user/src/app
