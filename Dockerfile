@@ -16,9 +16,9 @@ RUN cd /usr/src/app
 WORKDIR .
 #COPY . /usr/src/app
 #
-#RUN mvn clean
-#RUN mvn package -Denv=pub
+RUN mvn clean
+RUN mvn package -Denv=pub
 
 EXPOSE 8080
 #
-#CMD java -jar target/react-boot-0.0.1-SNAPSHOT.jar
+CMD java -jar target/react-boot-0.0.1-SNAPSHOT.jar
