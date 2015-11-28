@@ -1,5 +1,11 @@
 FROM daocloud.io/library/java
 
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
+COPY . /usr/src/app
+RUN echo 'data'
+RUN ls
+
 ENV MAVEN_VERSION 3.3.3
 
 RUN curl -fsSL http://archive.apache.org/dist/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz | tar xzf - -C /usr/share \
@@ -10,19 +16,6 @@ ENV MAVEN_HOME /usr/share/maven
 
 RUN echo 'Get Maven Home:'
 RUN echo $MAVEN_HOME
-
-RUN echo 'now '
-RUN ls
-
-RUN mkdir /usr/src/app
-COPY . /usr/src/app
-WORKDIR /user/src/app
-RUN cd /usr/src/app
-
-RUN echo 'now directory'
-RUN pwd
-RUN echo 'data'
-RUN ls
 
 #RUN mvn clean
 #RUN mvn package -Denv=pub
