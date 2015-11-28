@@ -16,6 +16,8 @@ RUN cd /usr/src/app
 WORKDIR .
 #COPY . /usr/src/app
 #
+RUN echo 'now directory'
+RUN pwd
 RUN mvn clean
 RUN mvn package -Denv=pub
 
