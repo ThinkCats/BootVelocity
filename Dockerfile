@@ -12,9 +12,8 @@ RUN echo 'Get Maven Home:'
 RUN echo $MAVEN_HOME
 
 RUN mkdir /usr/src/app
-WORKDIR .
 COPY . /usr/src/app
-#
+WORKDIR /user/src/app
 RUN cd /usr/src/app
 
 RUN echo 'now directory'
