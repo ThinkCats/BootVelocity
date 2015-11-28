@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <title>$!title</title>
+        <script type="text/javascript" src="plugins/reactjs/react.js"></script>
+        <script type="text/javascript" src="plugins/reactjs/react-dom.js"></script>
+        $!referCss
+    </head>
+<body>
+    $!content
+
+$!referJs
+</body>
+</html>
