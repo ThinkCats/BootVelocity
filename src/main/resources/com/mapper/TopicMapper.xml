@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mapper.TopicMapper">
+    <resultMap id="BaseResultMap" type="com.domain.Topic">
+        <id column="topic_id" jdbcType="BIGINT" property="topicId"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="content" jdbcType="LONGVARCHAR" property="content"/>
+    </resultMap>
+
+    <sql id="BaseColumnList">
+        topic_id,name,content
+    </sql>
+
+    <select id="findTopicList" resultMap="BaseResultMap">
+        SELECT * FROM topic
+    </select>
+
+</mapper>

@@ -1,12 +1,11 @@
 package com.config;
 
+import com.util.VelocityToolbox2View;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.*;
-import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.velocity.VelocityLayoutView;
 import org.springframework.web.servlet.view.velocity.VelocityLayoutViewResolver;
-import org.springframework.web.servlet.view.velocity.VelocityViewResolver;
 
 /**
  * Created by Wanglei on 15/11/26.
@@ -30,7 +29,9 @@ public class WebConfig extends WebMvcConfigurerAdapter {
         viewResolver.setSuffix(".vm");
         viewResolver.setExposeSpringMacroHelpers(true);
         viewResolver.setContentType("text/html;charset=UTF-8");
+//        viewResolver.setToolboxConfigLocation("toolbox.xml");
         viewResolver.setDateToolAttribute("dateTool");
+        viewResolver.setViewClass(VelocityToolbox2View.class);
         return viewResolver;
     }
     private static final String[] CLASSPATH_RESOURCE_LOCATIONS = {

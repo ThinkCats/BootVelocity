@@ -1,13 +1,19 @@
 <html>
     <head>
         <title>$!title</title>
-        <script type="text/javascript" src="plugins/reactjs/react.js"></script>
-        <script type="text/javascript" src="plugins/reactjs/react-dom.js"></script>
+        <link rel="stylesheet" type="text/css" href="plugins/bootstrap/css/bootstrap.min.css">
+        <link rel='stylesheet' type="text/css" href='1.0/css/style.css' />
+        <link rel="stylesheet" type="text/css" href="1.0/css/navbar.css">
         $!referCss
     </head>
 <body>
     $!content
 
-$!referJs
+    <script type="text/javascript" src="plugins/reactjs/react.js"></script>
+    <script type="text/javascript" src="plugins/reactjs/react-dom.js"></script>
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+
+    $!referJs
 </body>
 </html>

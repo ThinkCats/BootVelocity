@@ -3,10 +3,31 @@
 #define($title)Main#end
 
 #define($referJs)
-<script type="text/javascript" src="1.0/js/index.js"></script>
+    <script type="text/javascript" src="1.0/js/index.js"></script>
 #end
 
 #define($content)
-    <h1>hello world !!! Nice Work ~ !!! 哈哈哈```` lallaladad..///... </h1>
-    <div id="main"></div>
+    #include("include/navbar.vm")
+
+<div class="container content">
+    <p>Welcome to </p>
+</div>
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-9">
+            <!-- content list -->
+            <div id="topic-list"></div>
+        </div>
+
+        <!-- side bar -->
+        <div class="col-md-3 side-bar">
+            <div id="post-topic"></div>
+            <div id="hello"></div>
+        </div>
+
+    </div>
+
+</div>
 #end
