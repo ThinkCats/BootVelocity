@@ -2,6 +2,7 @@ package com.controller;
 
 import com.domain.User;
 import com.service.UserServices;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,6 +13,7 @@ import java.util.List;
 /**
  * Created by Wanglei on 15/11/26.
  */
+@Slf4j
 @Controller
 @RequestMapping("/")
 public class UserController {
@@ -22,7 +24,7 @@ public class UserController {
     @RequestMapping(method = RequestMethod.GET)
     public String demoIndex(){
         List<User> userList = userServices.getUserList();
-        System.out.println("======= user list:" + userList);
+        log.info("======= user list:" + userList);
         return "index";
     }
 }
