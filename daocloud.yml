@@ -1,4 +1,4 @@
-image: java:openjdk-8-jdk
+image: daocloud.io/library/java
 script:
         - echo "Ci Begin"
         - ls
