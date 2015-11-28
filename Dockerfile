@@ -12,12 +12,16 @@ RUN echo 'Get Maven Home:'
 RUN echo $MAVEN_HOME
 
 RUN mkdir /usr/src/app
-RUN cd /usr/src/app
 WORKDIR .
-#COPY . /usr/src/app
+COPY . /usr/src/app
 #
+RUN cd /usr/src/app
+
 RUN echo 'now directory'
 RUN pwd
+RUN echo 'data'
+RUN ls
+
 RUN mvn clean
 RUN mvn package -Denv=pub
 
