@@ -1,4 +1,4 @@
-FROM java:openjdk-8-jdk
+FROM daocloud.io/library/java
 
 ENV MAVEN_VERSION 3.3.3
 
