@@ -1,8 +1,8 @@
-FROM java:8-jre
+FROM  index.docker.io/library/tomcat
 
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
-#COPY . /tomcat/webapps
+COPY . /usr/src/app
 RUN echo 'data'
 RUN ls
 
@@ -21,7 +21,7 @@ RUN mvn clean
 RUN mvn package -Denv=pub
 
 EXPOSE 8080
-COPY target/react-boot-0.0.1-SNAPSHOT.war /tomcat/webapps
+COPY target/react-boot-0.0.1-SNAPSHOT.war /usr/local/tomcat/webapps
 RUN echo 'Tomcat webapps'
 RUN ls /tomcat/webapps
 #
