@@ -2,7 +2,7 @@ FROM daocloud.io/library/java
 
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
-COPY . /usr/src/app
+#COPY . /tomcat/webapps
 RUN echo 'data'
 RUN ls
 
@@ -21,5 +21,8 @@ RUN mvn clean
 RUN mvn package -Denv=pub
 
 EXPOSE 8080
+COPY target/react-boot-0.0.1-SNAPSHOT.war /tomcat/webapps
+RUN echo 'Tomcat webapps'
+RUN ls /tomcat/webapps
 #
-CMD java -jar target/react-boot-0.0.1-SNAPSHOT.jar
+#CMD java -jar target/react-boot-0.0.1-SNAPSHOT.jar

@@ -19,7 +19,7 @@ sudo npm install -g react-tools
  jsx --watch src/main/resources/static/1.0/dev/ src/main/resources/static/1.0/js/
 ```
 
-2.Use mvn command(in the root directory of the project):
+* Use mvn command(in the root directory of the project):
 ```bash
     mvn spring-boot:run
 ```
