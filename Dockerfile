@@ -25,7 +25,7 @@ RUN ls
 
 #COPY target/react-boot-0.0.1-SNAPSHOT.war /opt/apache-tomcat-8.0.23/webapps
 RUN cp target/react-boot-0.0.1-SNAPSHOT.war /maven
-RUN /opt/tomcat/bin/deploy-and-run.sh
+#RUN /opt/tomcat/bin/deploy-and-run.sh
 
 
 EXPOSE 8080
