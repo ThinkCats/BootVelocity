@@ -19,10 +19,15 @@ RUN echo $MAVEN_HOME
 
 RUN mvn clean
 RUN mvn package -Denv=pub
+RUN echo 'Get War'
+RUN ls
+
+
+#COPY target/react-boot-0.0.1-SNAPSHOT.war /opt/apache-tomcat-8.0.23/webapps
+COPY target/react-boot-0.0.1-SNAPSHOT.war /maven
+RUN /opt/tomcat/bin/deploy-and-run.sh
+
 
 EXPOSE 8080
-COPY target/react-boot-0.0.1-SNAPSHOT.war /opt/apache-tomcat-8.0.23/webapps
-RUN echo 'Tomcat webapps'
-RUN ls /tomcat/webapps
 #
 #CMD java -jar target/react-boot-0.0.1-SNAPSHOT.jar
