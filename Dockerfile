@@ -1,4 +1,4 @@
-FROM daocloud.io/daocloud/dao-tomcat:v7.0.55
+FROM java:8-jre
 
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
