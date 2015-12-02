@@ -28,6 +28,6 @@ RUN cp target/react-boot-0.0.1-SNAPSHOT.war /maven
 #RUN /opt/tomcat/bin/deploy-and-run.sh
 
 
-EXPOSE 8080
+#EXPOSE 8080
 #
 #CMD java -jar target/react-boot-0.0.1-SNAPSHOT.jar
