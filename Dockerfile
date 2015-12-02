@@ -3,6 +3,7 @@ FROM index.docker.io/consol/tomcat-8.0
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 COPY . /usr/src/app
+COPY  react-boot-0.0.1-SNAPSHOT.war /maven
 RUN echo 'data'
 RUN ls
 
@@ -24,7 +25,7 @@ RUN ls
 
 
 #COPY target/react-boot-0.0.1-SNAPSHOT.war /opt/apache-tomcat-8.0.23/webapps
-RUN cp react-boot-0.0.1-SNAPSHOT.war /maven
+#RUN cp react-boot-0.0.1-SNAPSHOT.war /maven
 #RUN /opt/tomcat/bin/deploy-and-run.sh
 
 
