@@ -21,7 +21,7 @@ RUN mvn clean
 RUN mvn package -Denv=pub
 
 EXPOSE 8080
-COPY target/react-boot-0.0.1-SNAPSHOT.war /usr/local/tomcat/webapps
+COPY target/react-boot-0.0.1-SNAPSHOT.war /opt/apache-tomcat-8.0.23/webapps
 RUN echo 'Tomcat webapps'
 RUN ls /tomcat/webapps
 #
